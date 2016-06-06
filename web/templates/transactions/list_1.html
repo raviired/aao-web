@@ -1,0 +1,108 @@
+<div class="padding-10">
+    <!--<div ng-include="'web/templates/transactions/filters-modal.html'"></div>-->
+<!--    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2">
+            <button ng-click="showFilters()"  class="btn btn-primary">Filters</button>
+            <button class="btn btn-danger btn-circle" ng-click="goToAddTransactionPage()">
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </div>    
+
+    </div>-->
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 text-center">
+            Transaction Starting
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 text-center">
+            Transaction Ending
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 text-center">
+            Bill Amount Range
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 text-center">
+            Credit Offered Range
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 text-center">
+            <!--<a href="#">Update Filters</a>-->
+            <button ng-click="showFilters()"  class="btn btn-info">Update Filters</button>
+<!--            <button class="btn btn-danger btn-circle" ng-click="goToAddTransactionPage()">
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>-->
+        </div>
+    </div>
+    <div class="row margin-top-10">
+        <div class="col-lg-2 col-md-2 col-sm-2">
+            <div class="input-group">
+                <div class="input-group-addon">From</div>
+                <input id="startDate" placeholder="dd/mm/yyyy" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2">
+            <div class="input-group">
+                <div class="input-group-addon">To</div>
+                <input id="endDate" placeholder="dd/mm/yyyy" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 text-center">
+            <div class="input-group">
+                <div class="input-group-addon">Min</div>
+                <input id="endDate" placeholder="Rs" type="text" class="form-control">
+                <div class="input-group-addon">Max</div>
+                <input id="endDate" placeholder="Rs" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 text-center">
+            <div class="input-group">
+                <div class="input-group-addon">Min</div>
+                <input id="endDate" placeholder="Rs" type="text" class="form-control">
+                <div class="input-group-addon">Max</div>
+                <input id="endDate" placeholder="Rs" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2">
+            <input placeholder="Employee Name" type="text" class="form-control">
+        </div>
+    </div>
+
+    <!--    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2">
+                <button ng-click="showFilters()"  class="btn btn-primary">Filters</button>
+                <button class="btn btn-danger btn-circle" ng-click="goToAddTransactionPage()">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </div>    
+            
+        </div>-->
+    <table class="table table-hover table-bordered table-condensed table-responsive margin-top-20 padding-10">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Employee Name</td>
+                <td>Original Bill</td>
+                <td>Credit Offered(%)</td>
+                <td>Credit Offered(Rs)</td>
+                <td>Service Charge(%)</td>
+                <td>Service Charge(Rs)</td>
+                <td>Credit Used</td>
+                <td>Cash Paid By Customer</td>
+                <td>Owe To AAO</td>
+                <td>Date/Time</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="transaction in transactions">
+                <td>{{transaction.id}}</td>
+                <td>{{transaction.first_name}} {{transaction.last_name}}</td>
+                <td>{{transaction.original_bill}}</td>
+                <td>{{transaction.credit_offered_percentage}}</td>
+                <td>{{transaction.credit_offered}}</td>
+                <td>{{transaction.service_charge_percentage}}</td>
+                <td>{{transaction.service_charge}}</td>
+                <td>{{transaction.credit_used}}</td>
+                <td>{{transaction.cash_amount_paid_by_customer}}</td>
+                <td>{{transaction.client_owes_to_aao}}</td>
+                <td>{{transaction.created_at}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

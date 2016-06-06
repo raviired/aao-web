@@ -1,0 +1,29 @@
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <a href="#">
+                <span class="glyphicon glyphicon-tint"></span>AAO
+            </a>
+        </li>
+        <li>
+            <a>Dashboard</a>
+        </li>
+        <li ng-hide="employeeType=='biller'">
+            <a ng-class="{active: activeLink == 'details'}" ng-click="goToDetails()">Restaurant Details</a></li>
+        <li>
+        <li ng-hide="employeeType=='biller'">
+            <a ng-class="{active: activeLink == 'cashbacks'}" ng-click="goToDefaultCashback()">Discount Schemes</a>
+        </li>        
+        <li ng-hide="employeeType=='biller'">
+            <a  ng-class="{active: activeLink == 'employees'}" ng-click="goToEmployees()">Employees</a>
+        </li>
+        <li>
+            <a  ng-class="{active: activeLink == 'transactions'}" ng-click="goToTransactions()">Transactions</a>
+        </li>
+        <li ng-hide="employeeType=='biller'">
+            <a ng-class="{active: activeLink == 'transactions'}" ng-click="goToSettings()">Settings</a>
+        </li>
+    </ul>
+</div>
+<!-- /#sidebar-wrapper -->

@@ -1,0 +1,99 @@
+<div class="container" id="dashboard-container">
+    <div class="row">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 select-style">
+                <select ng-model="duration" ng-change="updateGraph()">
+                    <option value="today">Today</option>
+                    <option value="lastWeek">Last Week</option>
+                    <option value="lastMonth">Last Month</option>
+                    <option value="lastThreeMonths">Last Three Months</option>
+                    <option value="lastSixMonths">Last Six Months</option>
+                </select>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+                <span class="stats-label label label-default">Gross Sales: {{totalGross}} Rs</span>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+                <span class="stats-label label label-info">Total Sales: {{totalSales}} Rs</span>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+                <span class="stats-label label label-warning">Service Chage: {{totalServiceCharges}} Rs</span>
+            </div>
+        </div>
+        <div class="row">
+            <canvas id="line" class="chart chart-line" data="data" labels="labels" colours="colours" options="options" legend="true" click="onClick" series="series"></canvas>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Current Values</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AAO Balance</td>
+                        <td>{{basicDetails.balance}} Rs</td>
+                    </tr>
+                    <tr>
+                        <td>Slow Hours Starts</td>
+                        <td>{{basicDetails.slow_hours_start}}</td>
+                    </tr>
+                    <tr>
+                        <td>Slow Hours Ends</td>
+                        <td>{{basicDetails.slow_hours_end}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-center"></th>
+                        <th class="text-center">Discount Range</th>
+                        <th class="text-center">Service Charge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">
+                            <span class="label label-default">LOW</span>
+                        </td>
+                        <td class="text-center">
+                            {{basicDetails.low_limit_min_value}} - {{basicDetails.low_limit_max_value}}
+                        </td>
+                        <td class="text-center">
+                            {{basicDetails.low_limit_service_charge}}%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <span class="label label-warning">MED</span>
+                        </td>
+                        <td class="text-center">
+                            {{basicDetails.med_limit_min_value}} - {{basicDetails.med_limit_max_value}}
+                        </td>
+                        <td class="text-center">
+                            {{basicDetails.med_limit_service_charge}}%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <span class="label label-info">HIGH</span>
+                        </td>
+                        <td class="text-center">
+                            {{basicDetails.high_limit_min_value}}+
+                        </td>
+                        <td class="text-center">
+                            {{basicDetails.high_limit_service_charge}}%
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

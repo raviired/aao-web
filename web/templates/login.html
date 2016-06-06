@@ -1,0 +1,26 @@
+<style type="text/css">
+    #custom-select{
+        position: relative;
+        height: 40px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 18px;
+    }
+</style>
+<div class="container">
+    <h2 class="form-signin-heading text-center" ng-click="hello()">Business Login Account</h2>
+    <form name="loginForm" class="form-signin" ng-submit="login()">
+        <div ng-class="showErrorMessage ? 'alert alert-danger' : 'hidden'" role="alert">
+            Invalid username or password
+        </div>
+        <select required name="eateryId" id="custom-select" class="form-control" ng-model="eateryId">
+            <option value="">Select your restaurant</option>
+            <option ng-repeat="eatery in eateries" value="{{eatery.id}}">{{eatery.name}}</option>
+        </select>
+        <input type="email" name="email" class="form-control" placeholder="Email address" required autofocus="" ng-model="email">
+        <input type="password" name="password" class="form-control" placeholder="Password" required ng-model="password">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+    </form>
+</div>

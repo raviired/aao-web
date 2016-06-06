@@ -1,0 +1,13 @@
+.input-group-lg>.form-control, 
+.input-group-lg>.input-group-addon, 
+.input-group-lg>.input-group-btn>.btn {
+    height: 35px;
+    padding: 7px 16px;
+    font-size: 15px;
+    line-height: 1.3333333;
+    /*border-radius: 6px;*/
+}   
+.categories-container label{ 
+    margin-bottom: 7px;
+    width: 150px;
+}
