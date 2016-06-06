@@ -1,0 +1,55 @@
+<div class="padding-10">
+
+    <div ng-include="'web/templates/cashbacks/sp-promotions-modal.html'"></div>
+    <div ng-include="'web/templates/cashbacks/publish-promotions-modal.html'"></div>
+
+    <div class='cashback-list-container'>
+        
+        <div ng-show="cashbacks.length === 0" class='alert alert-warning'>
+            <h3>No results found </h3>
+            <p>You don't seem to have any cashbacks set up. Please click the ADD button above to setup cashbacks.</p>
+        </div>
+        <div ng-show="invalidDatesSelection" class='alert alert-warning'>
+            <h4>Invalid date selection</h4>
+            <ul>
+                <li>Selected dates must be after {{date | date:'dd-MM-yyyy'}}.</li>
+                <li>If you are publishing a scheme start date can't be empty.</li>
+            </ul>
+        </div>
+        
+        <div class='row margin-bottom-10'>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="input-group">
+                    <div class="input-group-addon">Start Date</div>
+                    <input id="startDate" ng-class="{highlight: dates.$error}" placeholder="dd/mm/yyyy" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="input-group">
+                    <div class="input-group-addon">End Date</div>
+                    <input id="endDate" ng-class="{highlight: dates.$error}" placeholder="dd/mm/yyyy" type="text" class="form-control">
+                </div>
+            </div>
+            <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12 text-right'>
+                <button type="button" class="btn btn-danger" ng-click='openPublishPromotionsModal()'><span class="glyphicon glyphicon-volume-up"></span>&nbsp;Publish Scheme</button>
+                <button type="button" class="btn btn-info btn-scheme" ng-click='goToAddCashbacks()'><span class="glyphicon glyphicon-pencil"></span>&nbsp;Update Scheme</button>
+            </div>
+        </div>
+        <div class="row margin-top-10">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                    <div class="published-square-box" style=""></div>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-10">Published Sp. Promotions</div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                    <div class="sp-promotion-square-box" style=""></div>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-10">Unpublished Sp. Promotions</div>
+            </div>
+        </div>
+        <div class="row padding-20" id='calendar'></div>
+    </div>
+
+</div>

@@ -1,0 +1,105 @@
+<h4>Pick Hours Discounts</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-center"></th>
+                <th class="text-center">Discount Upto</th>
+                <th class="text-center">Mon</th>
+                <th class="text-center">Tue</th>
+                <th class="text-center">Wed</th>
+                <th class="text-center">Thu</th>
+                <th class="text-center">Fri</th>
+                <th class="text-center">Sat</th>
+                <th class="text-center">Sun</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center">
+                    <span class="label label-default">LOW</span>
+                </td>
+                <td class="text-center">
+                    {{limits.low}}
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.mon.low) || slowHours.mon.low < 5 || slowHours.mon.low >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.mon.low' ng-value="slowHours.mon.low < 5 ? 5 : slowHours.mon.low ">
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.tue.low) || slowHours.tue.low < 5 || slowHours.tue.low >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.tue.low'>
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.wed.low) || slowHours.wed.low < 5 || slowHours.wed.low >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.wed.low'>
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.thu.low) || slowHours.thu.low < 5 || slowHours.thu.low >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.thu.low'>
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.fri.low) || slowHours.fri.low < 5 || slowHours.fri.low < 5 || slowHours.fri.low >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.fri.low'>
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.sat.low) || slowHours.sat.low < 5 || slowHours.sat.low >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.sat.low'>
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.sun.low) || slowHours.sun.low < 5 || slowHours.sun.low >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.sun.low'>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center">
+                    <span class="label label-primary">MED</span>
+                </td>
+                <td class="text-center">
+                    {{limits.med}}
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.mon.med) || slowHours.mon.med < 5 || slowHours.mon.med >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.mon.med'>
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.tue.med) || slowHours.tue.med < 5 || slowHours.tue.med >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.tue.med'>
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.wed.med) || slowHours.wed.med < 5 || slowHours.wed.med >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.wed.med'>
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.thu.med) || slowHours.thu.med < 5 || slowHours.thu.med >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.thu.med'>
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.fri.med) || slowHours.fri.med < 5 || slowHours.fri.med >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.fri.med'>
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.sat.med) || slowHours.sat.med < 5 || slowHours.sat.med >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.sat.med'>
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.sun.med) || slowHours.sun.med < 5 || slowHours.sun.med >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.sun.med'>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center">
+                    <span class="label label-info">HIGH</span>
+                </td>
+                <td class="text-center">
+                    {{limits.high}}+
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.mon.high) || slowHours.mon.high < 5 || slowHours.mon.high >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.mon.high'>
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.tue.high) || slowHours.tue.high < 5 || slowHours.tue.high >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.tue.high'>
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.wed.high) || slowHours.wed.high < 5 || slowHours.wed.high >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.wed.high'>
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.thu.high) || slowHours.thu.high < 5 || slowHours.thu.high >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.thu.high'>
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.fri.high) || slowHours.fri.high < 5 || slowHours.fri.high >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.fri.high'>
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.sat.high) || slowHours.sat.high < 5 || slowHours.sat.high >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.sat.high'>
+                </td>
+                <td class="text-center">
+                    <input ng-class="{highlight: !isNumber(slowHours.sun.high) || slowHours.sun.high < 5 || slowHours.sun.high >90 }" type="text" maxlength="2" size="2" ng-model='slowHours.sun.high'>
+                </td>
+            </tr>
+        </tbody>
+    </table>

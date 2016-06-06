@@ -1,0 +1,52 @@
+<div class="padding-10">
+    <div ng-hide='hideFilters' ng-include="'web/templates/transactions/filters-modal.html'"></div>
+    <div ng-hide='hideFilters' class="container row">
+        <button ng-click="showFilters()"  class="btn btn-info">Show Filters</button>
+        <button ng-show="showDatesFilterTagValue" class="btn btn-default" type="button"> 
+            {{datesFilterTagValue}} &nbsp;
+            <span ng-click="clearDatesFilterTagValue()"  class="glyphicon glyphicon-remove"></span> 
+        </button>
+        <button ng-show="showBillAmountFilterTagValue" class="btn btn-default" type="button"> 
+            Bill Amount: <span class="filter-tag-text">{{billAmountFilterTagValue}}</span> &nbsp;
+            <span ng-click="clearBillAmountFilterTagValue()" class="glyphicon glyphicon-remove"></span>
+        </button>
+        <button ng-show="showCreditGivenFilterTagValue" class="btn btn-default" type="button"> 
+            Credit Given: <span class="filter-tag-text">{{creditGivenFilterTagValue}}</span>&nbsp;
+            <span ng-click="clearCreditGivenFilterTagValue()" class="glyphicon glyphicon-remove"></span> 
+        </button>
+        <button ng-show="showEmployeeNameFilterTagValue" class="btn btn-default" type="button"> 
+            <span class="filter-tag-text">{{employeeNameFilterTagValue}}</span>&nbsp;
+            <span ng-click="clearEmployeeNameFilterTagValue()" class="glyphicon glyphicon-remove"></span> 
+        </button>
+    </div>
+    <table class="table table-hover table-bordered table-condensed table-responsive margin-top-20 padding-10">
+        <thead>
+            <tr>
+                <td>Employee Name</td>
+                <td>Original Bill</td>
+                <td>Credit Offered(%)</td>
+                <td>Credit Offered(Rs)</td>
+                <td>Service Charge(%)</td>
+                <td>Service Charge(Rs)</td>
+                <td>Credit Used</td>
+                <td>Cash Paid By Customer</td>
+                <td>Owe To AAO</td>
+                <td>Date/Time</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="transaction in transactions">
+                <td>{{transaction.first_name}} {{transaction.last_name}}</td>
+                <td>{{transaction.original_bill}}</td>
+                <td>{{transaction.credit_offered_percentage}}</td>
+                <td>{{transaction.credit_offered}}</td>
+                <td>{{transaction.service_charge_percentage}}</td>
+                <td>{{transaction.service_charge}}</td>
+                <td>{{transaction.credit_used}}</td>
+                <td>{{transaction.cash_amount_paid_by_customer}}</td>
+                <td>{{transaction.client_owes_to_aao}}</td>
+                <td>{{transaction.created_at}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

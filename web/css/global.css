@@ -1,0 +1,95 @@
+.padding-5{
+    padding: 5px;
+}
+.padding-10{
+    padding: 10px;
+}
+.padding-20{
+    padding: 20px;
+}
+.text-center{
+    text-align: center;
+}
+.margin-left-30{
+    margin-left: 30px;
+}
+.margin-bottom-5{
+    margin-bottom: 5px;
+}
+.margin-bottom-10{
+    margin-bottom: 10px;
+}
+.margin-bottom-15{
+    margin-bottom: 15px;
+}
+.margin-top-10{
+    margin-top: 10px;
+}
+.margin-top-15{
+    margin-top: 15px;
+}
+.margin-top-20{
+    margin-top: 20px;
+}
+
+.divider{
+    border-bottom: 1px solid gray;
+}
+input.highlight, select.highlight { 
+    background:#F2DEDE !important;
+    border: 2px red solid !important;
+}
+.edit-link{
+    cursor: pointer;
+}
+.btn-scheme{
+    background-color: #6a67ce !important;
+}
+/** hack for highlighted days */
+.fc-highlight{
+    background: #FF6B6B !important;
+    opacity: 0.9 !important;
+}
+.published-square-box{
+    width: 20px; 
+    height: 20px; 
+    background: #FFCFA7;
+    border: 1px solid #222;
+}
+.sp-promotion-square-box{
+    width: 20px; 
+    height: 20px; 
+    background: #F2DEDE;
+    border: 1px solid #222;
+}
+.btn-add{
+    /*
+    background-color: #6a67ce !important;
+    border: 1px solid #6a67ce !important;
+    color: #fff;
+    */
+    color: #fff !important;
+    background-color: #d9534f !important;
+    border-color: #d43f3a !important;
+}
+
+.btn-circle{
+    width: 35px;
+    height: 35px;
+    text-align: center !important;
+    padding: 5px 0 !important;;
+    font-size: 20px !important;;
+    line-height: 2.00 !important;;
+    border-radius: 30px !important;;
+}
+.btn-circle .glyphicon.glyphicon-plus{
+    font-size: 20px;
+    position: relative;
+    top: -6px;
+}
+
+.table thead{
+    background: #ECF3F4;    
+    font-weight: bold;
+}
+

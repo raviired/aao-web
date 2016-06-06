@@ -1,0 +1,57 @@
+<div class="alert alert-danger" ng-show="specialDiscounts.invalidDiscountsError">
+    All discount must be more than 4%. Please correct the highlighted values.
+</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-center"></th>
+                <th class="text-center">Discount Upto</th>
+                <th class="text-center">Pick Hours</th>
+                <th class="text-center">Slow Hours</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center">
+                    <span class="label label-default">LOW</span>
+                </td>
+                <td class="text-center">
+                    {{limits.low}}
+                </td>
+                <td class="text-center">
+                    <input onkeypress='return event.charCode >= 48 && event.charCode <= 57'ng-class="{highlight: !isNumber(spPickHours.low) || spPickHours.low < 5 || spPickHours.low >90 }" type="text" maxlength="2" size="2" ng-model='spPickHours.low' ng-value="spPickHours.low < 5 ? 5 : spPickHours.low">
+                </td>
+                <td class="text-center">
+                    <input onkeypress='return event.charCode >= 48 && event.charCode <= 57'ng-class="{highlight: !isNumber(spSlowHours.low) || spSlowHours.low < 5 || spSlowHours.low >90 }" type="text" maxlength="2" size="2" ng-model='spSlowHours.low' ng-value="spSlowHours.low < 5 ? 5 : spSlowHours.low">
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center">
+                    <span class="label label-primary">MED</span>
+                </td>
+                <td class="text-center">
+                    {{limits.med}}
+                </td>
+                <td class="text-center">
+                    <input onkeypress='return event.charCode >= 48 && event.charCode <= 57'ng-class="{highlight: !isNumber(spPickHours.med) || spPickHours.med < 5 || spPickHours.med >90 }" type="text" maxlength="2" size="2" ng-model='spPickHours.med' ng-value="spPickHours.med < 5 ? 5 : spPickHours.med">
+                </td>
+                <td class="text-center">
+                    <input onkeypress='return event.charCode >= 48 && event.charCode <= 57'ng-class="{highlight: !isNumber(spSlowHours.med) || spSlowHours.med < 5 || spSlowHours.med >90 }" type="text" maxlength="2" size="2" ng-model='spSlowHours.med' ng-value="spSlowHours.med < 5 ? 5 : spSlowHours.med">
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center">
+                    <span class="label label-danger">HIGH</span>
+                </td>
+                <td class="text-center">
+                    {{limits.high}}
+                </td>
+                <td class="text-center">
+                    <input onkeypress='return event.charCode >= 48 && event.charCode <= 57'ng-class="{highlight: !isNumber(spPickHours.high) || spPickHours.high < 5 || spPickHours.high >90 }" type="text" maxlength="2" size="2" ng-model='spPickHours.high' ng-value="spPickHours.high < 5 ? 5 : spPickHours.high">
+                </td>
+                <td class="text-center">
+                    <input onkeypress='return event.charCode >= 48 && event.charCode <= 57'ng-class="{highlight: !isNumber(spSlowHours.high) || spSlowHours.high < 5 || spSlowHours.high >90 }" type="text" maxlength="2" size="2" ng-model='spSlowHours.high' ng-value="spSlowHours.high < 5 ? 5 : spSlowHours.high">
+                </td>
+            </tr>
+        </tbody>
+    </table>
