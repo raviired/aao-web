@@ -1,0 +1,27 @@
+<div class="balance-progress-container">
+    <div class="row panel panel-info">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                    <h4>Your current AAO Balance is &nbsp;<strong><mark>{{currentBalance}} Rs</<mark></strog></h4>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right">
+                    <button class="btn btn-success">Add Cash</button>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="alert alert-danger" ng-show='requiresRenewal'>
+                    Your account has been suspended. Please renew AAO cash by clicking on 'Add Cash' button above.
+                </div>
+            </div>
+            <div class="row text-center progress">
+                <div ng-class="getProgressBarClass(progressBarWidth)" ng-model="progressBarWidth" class="progress-bar" role="progressbar" aria-valuenow="{{currentBalance}}"
+                     aria-valuemin="0" aria-valuemax="{{maxBalance}}" style="width:{{progressBarWidth}}%">
+                    {{progressBarWidth}}%
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

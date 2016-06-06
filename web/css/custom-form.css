@@ -1,0 +1,164 @@
+.custom-form{
+    display: block;
+    margin: 5px 30px;
+    overflow: hidden;
+    background: #FFF;
+    border: 1px solid #E4E4E4;
+    border-radius: 5px;
+    font-size: 0;
+}
+
+@media(min-width:800px){
+    .custom-form div {
+        display: inline-block;
+    }
+    .custom-form div.col-submit {
+        display: block;
+    }
+}
+
+.custom-form div label
+{
+    display: block;
+    padding: 20px 20px 10px;
+    vertical-align: top;
+    font-family: Source Sans Pro, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #939393;
+    cursor: pointer;
+}
+
+.custom-form div.col-1, .custom-form div.col-2, .custom-form div.col-3, .custom-form div.col-4, .custom-form div.full-col { 
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.custom-form div.col-1 { 
+    width: 100%; 
+    box-shadow: 1px 1px #E4E4E4; border: none; 
+}
+
+@media(min-width: 800px){
+    .custom-form div.col-1, .custom-form div.col-2, .custom-form div.col-3, .custom-form div.col-4, .custom-form div.full-col { box-shadow: 1px 1px #E4E4E4; border: none; }  
+}
+
+@media(min-width:800px){
+    .custom-form div.col-2 { width: 50% }
+    .custom-form div.col-3 { width: 33.3333333333% }
+    .custom-form div.col-4 { width: 25% }
+}
+
+.custom-form div label input[type="checkbox"]{
+    height: 20px;
+    width: 20px;
+}
+.custom-form div label .checkbox-span{
+    margin-right: 20px;
+    min-width: 150px;
+    display: inline-block;
+}
+
+.custom-form div label input[type="text"],
+.custom-form div label input[type="password"],
+.custom-form div label textarea {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 35px;
+    line-height: 27px;
+    margin: 5px -5px 0;
+    padding: 7px 5px 3px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 200;
+    opacity: 1;
+    transition: opacity .3s, box-shadow .3s;
+    background: #EEEEEE;
+}
+
+.custom-form div.col-submit {
+    text-align: center;
+    padding: 20px;
+}
+
+.custom-form div.col-submit button.btn-add{
+    background: #A3CECE ;
+    border: 1px solid #E4E4E4;
+}
+
+.custom-form div.col-submit button.btn-cancel{
+    background: #fff ;
+    border-color: #ccc;
+    color: #333;
+}
+
+.custom-form div.col-submit button.btn-confirm{
+
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.custom-form div.col-submit button {
+
+    font-size: 16px;
+    color: #fff;
+    padding: 10px;
+    /*display: block;*/
+    width: 100%;
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+@media(min-width: 800px){
+    .custom-form div.col-submit button {
+        width: 25%;
+        /*margin: 0 auto;*/
+    }
+}
+
+.custom-form div.submit-btns{
+    width: 100%;
+}
+
+.custom-form div.col-submit button.btn-add:hover {
+    /*background: #92BDBD;*/
+}
+
+.custom-form div label select
+{
+    display: block;
+    width: 100%;
+    margin: 5px 0 6px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 200;
+    opacity: 1;
+    background: #EEEEEE;
+    height: 27px;
+}
+
+.custom-form div label input[type="text"]:focus, 
+.custom-form div label select:focus,
+.custom-form div label textarea {
+    /*opacity: 1;*/
+    box-shadow: 0 3px 4px rgba(0, 0, 0, .15);
+}
+
+.tooltip.top .tooltip-inner {
+    background-color: #C64D21;
+    color: #fff;
+    max-width: 300px;
+}
+.tooltip.top .tooltip-arrow {
+    border-top-color: #C64D21;
+}
